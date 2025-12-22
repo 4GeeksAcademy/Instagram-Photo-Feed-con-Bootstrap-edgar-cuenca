@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"></head>
   <body>
     <div class="text-bg-dark">
                   <div class="container">
@@ -13,59 +13,143 @@
                     <div class="col-12 col-lg-9">
                       <div class="bg-light border">
                         
-                        <div class="d-flex justify-content-center align-items-end">
-                          <div class="btn-group " role="group" aria-label="Basic outlined example">
-                            <button type="button" class="btn btn-outline-primary">Left</button>
-                            <button type="button" ">Middle</button>
+                      <nav class="navbar bg-body-tertiary">
+                      <div class="container-fluid">
+                        
+                        <a class="navbar-brand d-flex align-items-center" href="#">
+                          <i class="bi bi-instagram me-2" style="font-size: 1.5rem;"></i>
+                          <span>Instagram</span>
+                        </a>
+
+                        <div class="d-flex">
+                          
+                          <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                            Create a new post
+                          </button>
+
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="bi bi-gear-fill"></i>
+                            </button>
+                            
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#">Profile</a></li>
+                              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                          </div>
+
+                        </div> </div>
+                    </nav>
+
+                      
+                    <div class="d-flex justify-content-center my-2">
+                      <div class="btn-group" role="group">
+                                  <button id="vistaGrid" type="button" class="btn btn-outline-primary btn-sm p-1 px-2">
+                              <i class="bi bi-grid-3x3"></i>
+                          </button>
+                          <button id="vistaLista" type="button" class="btn btn-outline-primary btn-sm p-1 px-2">
+                              <i class="bi bi-square"></i>
+                          </button>
+                          
+                      </div>
+                  </div>
+                       
+
+
+                      <div class="container-fluid p-0 mt-1">
+                        <div id="contenedorPrincipal" class="row g-1">
+                          <div class="col-4 item-galeria">
+                            <img src="https://picsum.photos/600/600?random=1" class="img-fluid" alt="P1">
+                          </div>
+                          <div class="col-4 item-galeria">
+                                <img src="https://picsum.photos/600/600?random=2" class="img-fluid" alt="P2">
+                          </div>
+                          <div class="col-4 item-galeria">
+                                <img src="https://picsum.photos/600/600?random=3" class="img-fluid" alt="P3">
+                          </div>
+                          <div class="col-4 item-galeria">
+                                <img src="https://picsum.photos/600/600?random=4" class="img-fluid" alt="P4">
+                          </div>
+                          <div class="col-4 item-galeria">
+                              <img src="https://picsum.photos/600/600?random=5" class="img-fluid" alt="P5">
+                          </div>
+                          <div class="col-4 item-galeria">
+                              <img src="https://picsum.photos/600/600?random=6" class="img-fluid" alt="P6">
+                          </div>
+                          <div class="col-4 item-galeria">
+                              <img src="https://picsum.photos/600/600?random=7" class="img-fluid" alt="P7">
+                          </div>
+                          <div class="col-4 item-galeria">
+                              <img src="https://picsum.photos/600/600?random=8" class="img-fluid" alt="P8">
+                          </div>
+                          <div class="col-4 item-galeria">
+                              <img src="https://picsum.photos/600/600?random=9" class="img-fluid" alt="P9">
                           </div>
                         </div>
-                        <div class="container-fluid p-0 text-center">
-                              <div class="container-fluid p-0 mt-1">
-                                <div class="row g-1">
-                                  
-                                  <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
+                      </div>
+                </div>
+                </div>
+            </div>
+           </div>
+        </div>
 
-                                  <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=2" class="img-fluid shadow-none" alt="Proyecto 2">
-                                  </div>
+        <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="createPostModalLabel">Create a new post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
 
-                                  <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=3" class="img-fluid shadow-none" alt="Proyecto 3">
-                                  </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="captionTextarea" class="form-label fw-bold">Caption:</label>
+                  <textarea class="form-control" id="captionTextarea" rows="3" placeholder="Add the caption of your post here"></textarea>
+                </div>
+                
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-camera-fill"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </button>
+                </div>
+              </div>
 
-                                   <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
 
-                                   <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
+            </div>
+          </div>
+        </div>
 
-                                   <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
+<script>
+    const btnGrid = document.getElementById('vistaGrid');
+    const btnLista = document.getElementById('vistaLista');
+    const columnas = document.querySelectorAll('.item-galeria');
 
-                                   <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
+    btnGrid.addEventListener('click', () => {
+        columnas.forEach(col => {
+            col.classList.remove('col-12');
+            col.classList.add('col-4');
+        });
+    });
 
-                                   <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
-
-                                   <div class="col-12 col-md-4">
-                                    <img src="https://picsum.photos/600/600?random=1" class="img-fluid shadow-none" alt="Proyecto 1">
-                                  </div>
-
-                                  </div>
-                              </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-      </div>
+    btnLista.addEventListener('click', () => {
+        columnas.forEach(col => {
+            col.classList.remove('col-4');
+            col.classList.add('col-12');
+        });
+    });
+</script>
+                     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
